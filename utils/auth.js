@@ -5,15 +5,19 @@ import { clientCredentials } from './client';
 const checkUser = (uid) => new Promise((resolve, reject) => {
   fetch(`${clientCredentials.databaseURL}/checkuser`, {
     method: 'POST',
-    body: JSON.stringify({
-      uid,
-    }),
+    body: JSON.stringify({ uid }),
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
     },
   })
-    .then((resp) => resolve(resp.json()))
+    .then((resp) => {
+      if (resp.ok) {
+        resolve(resp.json());
+      } else {
+        resolve({});
+      }
+    })
     .catch(reject);
 });
 
