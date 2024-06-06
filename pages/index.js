@@ -14,7 +14,7 @@ function Home() {
         </div>
         <div id="rightside">
           <h1>Welcome to Architecture Archive, {user.fbUser.displayName}!</h1><br /><br />
-          <p>Architecture Archive is your gateway to exploring the depths of our architectural history. We are dedicated to documenting and celebrating the stories of the world's most remarkable historical buildings, ensuring their timeless beauty and significance are never forgotten.<br /><br />
+          <p>Architecture Archive is your gateway to exploring the depths of our architectural history. We are dedicated to documenting and celebrating the stories of the world's most remarkable historical structures, ensuring their timeless beauty and significance are never forgotten.<br /><br />
 
             Our archive offers a deep dive into the intricate details, historical contexts, and cultural impacts of these architectural wonders. Whether you are an architect, historian, student, or simply a lover of beautiful buildings, our collection is designed to inspire and educate.<br /><br />
 

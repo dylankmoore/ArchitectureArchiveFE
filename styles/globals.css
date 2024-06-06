@@ -74,3 +74,25 @@ body {
   border-radius: 0;
   box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
+.archive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-container {
+  width: 370px;
+  margin: 10px 1.5%;
+  padding: 10px;
+}
+
+.detailcard {
+    max-width: 480px;
+    padding: 5px;
+  }
+
+  #detailcontainer {
+    display: flex;
+    justify-content: center;
+  }
