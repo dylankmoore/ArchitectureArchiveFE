@@ -28,9 +28,7 @@ function BuildingDetails() {
   };
 
   const handleDelete = (buildingId) => {
-    // API call to delete building
     console.warn('Deleting building:', buildingId);
-    // Optionally navigate back to the building list
     router.push('/buildings');
   };
 
@@ -51,7 +49,7 @@ function BuildingDetails() {
         building={building}
         onDelete={handleDelete}
         onEdit={handleEdit}
-      />
+      /><br />
     </Container>
   );
 }

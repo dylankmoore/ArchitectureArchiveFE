@@ -4,7 +4,7 @@ const endpoint = clientCredentials.databaseURL;
 
 // ADD style to building
 const addStyleCategory = (buildingId, styleId) => {
-  const url = `${endpoint}/buildings/${buildingId}/style`;
+  const url = `${endpoint}buildings/${buildingId}/style`;
 
   return new Promise((resolve, reject) => {
     fetch(url, {
@@ -27,7 +27,7 @@ const addStyleCategory = (buildingId, styleId) => {
 
 // DELETE style from building
 const deleteStyleFromBuilding = (buildingId, styleId) => {
-  const url = `${endpoint}/buildings/${buildingId}/styles/${styleId}`;
+  const url = `${endpoint}buildings/${buildingId}/styles/${styleId}`;
 
   return new Promise((resolve, reject) => {
     fetch(url, {
@@ -46,6 +46,21 @@ const deleteStyleFromBuilding = (buildingId, styleId) => {
   });
 };
 
+// GET all styles
+const getStyles = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/styles`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch((error) => reject(error));
+});
+
 export {
-  addStyleCategory, deleteStyleFromBuilding,
+  addStyleCategory,
+  deleteStyleFromBuilding,
+  getStyles,
 };

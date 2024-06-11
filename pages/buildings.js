@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
-import { getAllBuildings } from '../api/BuildingData';
+import { useRouter } from 'next/router';
+import { getAllBuildings, deleteBuilding } from '../api/BuildingData';
 import BuildingCard from '../components/BuildingCard';
 
 function Buildings() {
   const [buildings, setBuildings] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     getAllBuildings().then((data) => {
@@ -18,6 +20,25 @@ function Buildings() {
     });
   }, []);
 
+  const handleViewMore = (buildingId) => {
+    console.warn(`View more details for building ID: ${buildingId}`);
+    router.push(`/buildings/${buildingId}`);
+  };
+
+  const handleEdit = (buildingId) => {
+    console.warn(`Edit building ID: ${buildingId}`);
+    router.push(`/buildings/edit/${buildingId}`);
+  };
+
+  const handleDelete = (buildingId) => {
+    console.warn(`Delete building ID: ${buildingId}`);
+    deleteBuilding(buildingId).then(() => {
+      setBuildings(buildings.filter((building) => building.buildingId !== buildingId));
+    }).catch((error) => {
+      console.error('Failed to delete building:', error);
+    });
+  };
+
   const renderContent = () => {
     if (isLoading) {
       return <p>Loading...</p>;
@@ -28,11 +49,11 @@ function Buildings() {
         <div className="archive">
           {buildings.map((building) => (
             <BuildingCard
-              key={building.BuildingId}
+              key={building.buildingId}
               building={building}
-              onViewMore={() => console.warn('Viewing more:', building.BuildingId)}
-              onEdit={() => console.warn('Editing:', building.BuildingId)}
-              onDelete={() => console.warn('Deleting:', building.BuildingId)}
+              onViewMore={() => handleViewMore(building.buildingId)}
+              onEdit={() => handleEdit(building.buildingId)}
+              onDelete={() => handleDelete(building.buildingId)}
             />
           ))}
         </div>

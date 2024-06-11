@@ -2,9 +2,36 @@ import { clientCredentials } from '../utils/client';
 
 const endpoint = clientCredentials.databaseURL;
 
+// CREATE a building
+const createBuilding = (buildingDetails) => {
+  const url = `${endpoint}/buildings/new`;
+
+  return new Promise((resolve, reject) => {
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(buildingDetails),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to create new building.');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        resolve(data);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+};
+
 // GET all buildings
 const getAllBuildings = () => {
-  const url = 'https://localhost:7258/buildings';
+  const url = `${endpoint}/buildings`;
 
   return new Promise((resolve, reject) => {
     fetch(url, {
@@ -26,7 +53,7 @@ const getAllBuildings = () => {
 
 // GET building by ID
 const getBuildingById = (buildingId) => {
-  const url = `${endpoint}buildings/${buildingId}`;
+  const url = `${endpoint}/buildings/${buildingId}`;
 
   return new Promise((resolve, reject) => {
     fetch(url, {
@@ -38,29 +65,6 @@ const getBuildingById = (buildingId) => {
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch building details');
-        }
-        return response.json();
-      })
-      .then((data) => resolve(data))
-      .catch((error) => reject(error));
-  });
-};
-
-// CREATE a building
-const createBuilding = (buildingData) => {
-  const url = `${endpoint}/buildings`;
-
-  return new Promise((resolve, reject) => {
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(buildingData),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Failed to create building');
         }
         return response.json();
       })
