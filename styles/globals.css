@@ -96,3 +96,24 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  #view {
+    background-color: white;
+    border-color: white;
+  }
+
+  #edit {
+    background-color: white;
+    border-color: white;
+  }
+
+  #delete {
+    background-color: white;
+    border-color: white;
+  }
+
+  #button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }

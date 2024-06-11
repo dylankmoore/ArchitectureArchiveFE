@@ -46,6 +46,19 @@ const deleteTagFromBuilding = (buildingId, tagId) => {
   });
 };
 
+// GET all tags
+const getTags = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/tags`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch((error) => reject(error));
+});
+
 export {
-  addTagsToBuilding, deleteTagFromBuilding,
+  addTagsToBuilding, deleteTagFromBuilding, getTags,
 };
