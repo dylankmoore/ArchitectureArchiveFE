@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { Container } from 'react-bootstrap';
 import BuildingDetailsCard from '../../components/BuildingDetailCard';
 import { getBuildingById } from '../../api/BuildingData';
+import Footer from '../footer';
 
 function BuildingDetails() {
   const [building, setBuilding] = useState(null);
@@ -23,7 +24,6 @@ function BuildingDetails() {
   }, [router.isReady, id]);
 
   const handleEdit = (buildingId) => {
-    // Navigate to edit page
     router.push(`/buildings/edit/${buildingId}`);
   };
 
@@ -41,15 +41,17 @@ function BuildingDetails() {
   }
 
   return (
-    <Container>
-      <br />
-      <h1>Building Details</h1>
+    <Container><br />
+      <div id="buildingdetailtitle">
+        <h4>BUILDING DETAILS</h4>
+      </div>
       <hr /><br />
       <BuildingDetailsCard
         building={building}
         onDelete={handleDelete}
         onEdit={handleEdit}
       /><br />
+      <Footer />
     </Container>
   );
 }

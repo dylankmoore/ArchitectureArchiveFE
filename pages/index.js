@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
-import { Button } from 'react-bootstrap';
+import { Button, Carousel } from 'react-bootstrap';
 import Link from 'next/link';
 import { useAuth } from '../utils/context/authContext';
 
@@ -10,7 +10,53 @@ function Home() {
     <div className="container">
       <div id="landingpage">
         <div id="leftside">
-          <img src="/building.png" alt="logo" className="nav-logo me-3" width="525" height="700" /> <br /><br />
+          <Carousel>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="/building.png"
+                alt="The Nashville Parthenon"
+                width="525"
+                height="700"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="/museum.png"
+                alt="Guggenheim Museum"
+                width="525"
+                height="700"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="/pisa.png"
+                alt="Tower of Pisa"
+                width="525"
+                height="700"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="/alhambra.png"
+                alt="Alhambra"
+                width="525"
+                height="700"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="/needle.png"
+                alt="The Space Needle"
+                width="525"
+                height="700"
+              />
+            </Carousel.Item>
+          </Carousel>
         </div>
         <div id="rightside">
           <h1>Welcome to Architecture Archive, {user.fbUser.displayName}!</h1><br /><br />
@@ -22,7 +68,7 @@ function Home() {
 
             Let’s get started...
           </p><br />
-        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Link href="/buildings" passHref>
             <Button type="button" className="copy-btn raise" id="viewarchivebtn">View Archive</Button>
           </Link>&nbsp; &nbsp;

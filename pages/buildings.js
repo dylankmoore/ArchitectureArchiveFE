@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import { getAllBuildings, deleteBuilding } from '../api/BuildingData';
 import BuildingCard from '../components/BuildingCard';
+import Footer from './footer';
 
 function Buildings() {
   const [buildings, setBuildings] = useState([]);
@@ -64,11 +65,13 @@ function Buildings() {
   };
 
   return (
-    <Container>
-      <br />
-      <h1>All Buildings</h1>
+    <Container><br />
+      <div id="archivetitle">
+        <h4>ARCHIVE</h4>
+      </div>
       <hr /><br />
       {renderContent()}
+      <Footer />
     </Container>
   );
 }
