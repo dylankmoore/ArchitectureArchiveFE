@@ -112,89 +112,91 @@ function UpdateBuildingForm({ buildingId }) {
   };
 
   return (
-    <Container><br />
-      {submissionStatus && (
+    <div id="updatepage">
+      <Container><br />
+        {submissionStatus && (
         <Alert variant={submissionStatus.success ? 'success' : 'danger'}>
           {submissionStatus.message}
         </Alert>
-      )}
-      <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3">
-          <Form.Label>Building Name:</Form.Label>
-          <Form.Control type="text" name="name" value={formData.name} onChange={handleChange} required />
-        </Form.Group>
+        )}
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3">
+            <Form.Label>Building Name:</Form.Label>
+            <Form.Control type="text" name="name" value={formData.name} onChange={handleChange} required />
+          </Form.Group>
 
-        <Form.Group className="mb-3">
-          <Form.Label>Year Built:</Form.Label>
-          <Form.Control type="text" name="yearBuilt" value={formData.yearBuilt} onChange={handleChange} />
-        </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Year Built:</Form.Label>
+            <Form.Control type="text" name="yearBuilt" value={formData.yearBuilt} onChange={handleChange} />
+          </Form.Group>
 
-        <Form.Group className="mb-3">
-          <Form.Label>Location:</Form.Label>
-          <Form.Control type="text" name="location" value={formData.location} onChange={handleChange} />
-        </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Location:</Form.Label>
+            <Form.Control type="text" name="location" value={formData.location} onChange={handleChange} />
+          </Form.Group>
 
-        <Form.Group className="mb-3">
-          <Form.Label>Description:</Form.Label>
-          <Form.Control as="textarea" rows={3} name="description" value={formData.description} onChange={handleChange} />
-        </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Description:</Form.Label>
+            <Form.Control as="textarea" rows={3} name="description" value={formData.description} onChange={handleChange} />
+          </Form.Group>
 
-        <Form.Group className="mb-3">
-          <Form.Check type="checkbox" label="Is this building in the National Register of Historic Places?" name="isRegistered" checked={formData.isRegistered} onChange={handleChange} />
-        </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Check type="checkbox" label="Is this building in the National Register of Historic Places?" name="isRegistered" checked={formData.isRegistered} onChange={handleChange} />
+          </Form.Group>
 
-        <Form.Group className="mb-3">
-          <Form.Label>Image URL:</Form.Label>
-          <Form.Control type="text" name="imageURL" value={formData.imageURL} onChange={handleChange} />
-        </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Image URL:</Form.Label>
+            <Form.Control type="text" name="imageURL" value={formData.imageURL} onChange={handleChange} />
+          </Form.Group>
 
-        <Form.Group className="mb-3">
-          <Form.Label>Choose Building Style:</Form.Label>
-          <Form.Select name="styleId" value={formData.styleId} onChange={handleStyleChange}>
-            <option value="">Select</option>
-            {styles.map((style) => (
-              <option key={style.styleId} value={style.styleId}>{style.name}</option>
+          <Form.Group className="mb-3">
+            <Form.Label>Choose Building Style:</Form.Label>
+            <Form.Select name="styleId" value={formData.styleId} onChange={handleStyleChange}>
+              <option value="">Select</option>
+              {styles.map((style) => (
+                <option key={style.styleId} value={style.styleId}>{style.name}</option>
+              ))}
+            </Form.Select>
+          </Form.Group>
+
+          <Form.Label>Choose Tags:</Form.Label><br />
+          <Button variant="light" onClick={() => setShowTagsModal(true)}>Choose Tags</Button>
+          <ListGroup><br />
+            {selectedTags.map((tagId) => {
+              const tag = tags.find((t) => t.tagId === tagId);
+              return tag ? (
+                <ListGroup.Item key={tag.tagId}>
+                  {tag.name} &nbsp;&nbsp;&nbsp;&nbsp;
+                  <Button variant="secondary" size="sm" onClick={() => handleRemoveTag(tag.tagId)}>REMOVE</Button>
+                </ListGroup.Item>
+              ) : null;
+            })}
+          </ListGroup><br />
+
+          <Button id="submit" type="submit">Submit</Button>
+        </Form><br />
+
+        <Modal show={showTagsModal} onHide={() => setShowTagsModal(false)}>
+          <Modal.Header closeButton>
+            <Modal.Title>Select Tags</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {tags.map((tag) => (
+              <Form.Check
+                key={tag.tagId}
+                label={tag.name}
+                type="checkbox"
+                checked={selectedTags.includes(tag.tagId)}
+                onChange={() => handleToggleTag(tag.tagId)}
+              />
             ))}
-          </Form.Select>
-        </Form.Group>
-
-        <Form.Label>Choose Tags:</Form.Label><br />
-        <Button variant="secondary" onClick={() => setShowTagsModal(true)}>Choose Tags</Button>
-        <ListGroup><br />
-          {selectedTags.map((tagId) => {
-            const tag = tags.find((t) => t.tagId === tagId);
-            return tag ? (
-              <ListGroup.Item key={tag.tagId}>
-                {tag.name} &nbsp;&nbsp;&nbsp;&nbsp;
-                <Button id="remove" size="sm" onClick={() => handleRemoveTag(tag.tagId)}>REMOVE</Button>
-              </ListGroup.Item>
-            ) : null;
-          })}
-        </ListGroup><br />
-
-        <Button variant="primary" type="submit">Submit</Button>
-      </Form><br />
-
-      <Modal show={showTagsModal} onHide={() => setShowTagsModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Select Tags</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {tags.map((tag) => (
-            <Form.Check
-              key={tag.tagId}
-              label={tag.name}
-              type="checkbox"
-              checked={selectedTags.includes(tag.tagId)}
-              onChange={() => handleToggleTag(tag.tagId)}
-            />
-          ))}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowTagsModal(false)}>Close</Button>
-        </Modal.Footer>
-      </Modal>
-    </Container>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={() => setShowTagsModal(false)}>Close</Button>
+          </Modal.Footer>
+        </Modal>
+      </Container>
+    </div>
   );
 }
 

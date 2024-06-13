@@ -18,11 +18,11 @@ function BuildingCard({
       <Card style={{ width: '100%' }}>
         <Card.Img variant="top" src={building.imageURL} alt="Building Image" height="300px" />
         <Card.Body>
-          <Card.Title>{building.name}</Card.Title>
+          <Card.Title style={{ textAlign: 'center' }}>{building.name}</Card.Title><br />
           <Card.Text>
-            Location: {building.location}<br />
-            Year Built: {building.yearBuilt}<br />
-            Style: {building.style}
+            <b>Location</b>: {building.location}<br />
+            <b>Year Built</b>: {building.yearBuilt}<br />
+            <b>Style</b>: {building.style}
           </Card.Text>
           <div id="button-group" style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
             <Button id="view" onClick={() => onViewMore(building.buildingId)}>

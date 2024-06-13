@@ -2,6 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { Container } from 'react-bootstrap';
 import UpdateBuildingForm from '../../../components/forms/UpdateBuildingForm';
+import Footer from '../../footer';
 
 const EditBuildingPage = () => {
   const router = useRouter();
@@ -13,8 +14,15 @@ const EditBuildingPage = () => {
 
   return (
     <Container>
-      <h1>Edit Building</h1>
-      <UpdateBuildingForm buildingId={parseInt(id, 10)} />
+      <br />
+      <div id="edittitle">
+        <h4>EDIT BUILDING</h4>
+      </div><hr />
+      <br />
+      <div id="updatepage">
+        <UpdateBuildingForm buildingId={parseInt(id, 10)} />
+      </div>
+      <Footer />
     </Container>
   );
 };
