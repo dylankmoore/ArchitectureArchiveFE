@@ -1,27 +1,36 @@
-// components/SearchBar.js
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form, FormControl } from 'react-bootstrap';
+import { Form, FormControl, Button } from 'react-bootstrap';
 
-export default function SearchBar({ onSearch }) {
-  const handleChange = (e) => {
-    onSearch(e.target.value.toLowerCase());
-  };
-
+export default function SearchBar({
+  searchTerm, onSearchChange, onSearchSubmit, onFocus, onBlur,
+}) {
   return (
-    <Form className="d-flex text" style={{ width: '60%', margin: '0 auto', height: '50px' }}>
+    <Form className="d-flex" onSubmit={onSearchSubmit}>
       <FormControl
         type="search"
         placeholder="Search"
         className="me-2"
         aria-label="Search"
-        name="search"
-        onChange={handleChange}
+        value={searchTerm}
+        onChange={onSearchChange}
+        style={{
+          border: '1px solid black',
+          marginRight: '10px',
+          outlineColor: 'black',
+        }}
+        onFocus={onFocus}
+        onBlur={onBlur}
       />
+      <Button variant="secondary" type="submit" style={{ padding: '0 10px' }}>Search</Button>
     </Form>
   );
 }
 
 SearchBar.propTypes = {
-  onSearch: PropTypes.func.isRequired,
+  searchTerm: PropTypes.string.isRequired,
+  onSearchChange: PropTypes.func.isRequired,
+  onSearchSubmit: PropTypes.func.isRequired,
+  onFocus: PropTypes.func.isRequired,
+  onBlur: PropTypes.func.isRequired,
 };

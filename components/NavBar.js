@@ -3,10 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
-  Navbar, Container, Nav, Form, FormControl, Button,
+  Navbar, Container, Nav,
 } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import { signOut } from '../utils/auth';
+import SearchBar from './SearchBar';
 
 export default function NavBar() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,7 +17,11 @@ export default function NavBar() {
     setSearchTerm('');
   }, []);
 
-  const handleSearch = (e) => {
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchTerm) {
       router.push(`/search?query=${searchTerm}`);
@@ -53,24 +58,13 @@ export default function NavBar() {
               <Nav.Link>CREATE ENTRY</Nav.Link>
             </Link>&nbsp;
           </Nav>
-          <Form className="d-flex" onSubmit={handleSearch}>
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              style={{
-                border: '1px solid black',
-                marginRight: '10px',
-                outlineColor: 'black',
-              }}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-            />
-            <Button variant="secondary" type="submit" style={{ padding: '0 10px' }}>Search</Button>
-          </Form>
+          <SearchBar
+            searchTerm={searchTerm}
+            onSearchChange={handleSearchChange}
+            onSearchSubmit={handleSearchSubmit}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+          />
           <button
             type="button"
             onClick={signOut}
