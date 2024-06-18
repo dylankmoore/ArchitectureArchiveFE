@@ -185,6 +185,7 @@ body {
   }
 
   #submit {
+    display: flex;
     width: 140px;
     justify-content: center;
     align-items: center;
@@ -193,6 +194,17 @@ body {
     color: white;
     border-radius: 20px;
     box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  #submit:hover {
+    width: 140px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 82, 32);
+    border-radius: 20px;
+    border: 2px solid white; 
+    color: white;
+    box-shadow: 0 10px 8px 0 rgb(148, 143, 143);
   }
 
   .carousel-container {
@@ -229,3 +241,109 @@ body {
     background-color: rgb(208, 73, 19);
     color: white;
   }
+
+  .custom-tooltip .tooltip-inner {
+    background-color: #333;
+    color: #fff;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  
+  .custom-tooltip .arrow::before {
+    border-bottom-color: #333;
+  }
+
+.is-valid,
+.was-validated .form-control:valid,
+.was-validated .form-select:valid,
+.was-validated .form-check-input:valid {
+  border-color: black;
+}
+
+.is-invalid,
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid,
+.was-validated .form-check-input:invalid {
+  border-color: red;
+}
+
+.is-valid:focus,
+.was-validated .form-control:valid:focus,
+.was-validated .form-select:valid:focus,
+.was-validated .form-check-input:valid:focus {
+  border-color: black;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+}
+
+.is-invalid:focus,
+.was-validated .form-control:invalid:focus,
+.was-validated .form-select:invalid:focus,
+.was-validated .form-check-input:invalid:focus {
+  border-color: red;
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+}
+
+#choosetagsbtn {
+  margin-bottom: 10px;
+}
+
+#confirmdelete {
+  display: flex;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(209, 82, 32);
+  border: 2px solid white; 
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#confirmdelete:hover {
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(209, 82, 32);
+  border-radius: 20px;
+  border: 2px solid white; 
+  color: white;
+  box-shadow: 0 10px 8px 0 rgb(148, 143, 143);
+}
+
+#cancel {
+  display: flex;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(163, 163, 163);
+  border: 2px solid white; 
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#cancel:hover {
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(163, 163, 163);
+  border-radius: 20px;
+  border: 2px solid white; 
+  color: white;
+  box-shadow: 0 10px 8px 0  rgb(148, 143, 143);
+}
+
+#view:hover{
+background-color:rgba(0, 0, 0, 0.2);
+}
+
+#edit:hover{
+background-color:rgba(0, 0, 0, 0.2);
+}
+  
+#delete:hover{
+background-color:rgba(0, 0, 0, 0.2);
+}
+    

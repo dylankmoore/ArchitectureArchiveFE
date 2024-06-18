@@ -25,13 +25,13 @@ function BuildingCard({
             <b>Style</b>: {building.style}
           </Card.Text>
           <div id="button-group" style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-            <Button id="view" onClick={() => onViewMore(building.buildingId)}>
+            <Button id="view" title="View More Details" onClick={() => onViewMore(building.buildingId)}>
               <img src="/view.png" alt="View" height="20px" width="20px" />
             </Button>
-            <Button id="edit" onClick={() => onEdit(building.buildingId)}>
+            <Button id="edit" title="Edit" onClick={() => onEdit(building.buildingId)}>
               <img src="/edit.png" alt="Edit" height="20px" width="20px" />
             </Button>
-            <Button id="delete" onClick={() => setShowModal(true)}>
+            <Button id="delete" title="Delete" onClick={() => setShowModal(true)}>
               <img src="/delete.png" alt="Delete" height="20px" width="20px" />
             </Button>
           </div>
@@ -46,10 +46,10 @@ function BuildingCard({
           Are you sure you want to delete this building?
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
+          <Button id="cancel" variant="secondary" onClick={() => setShowModal(false)}>
             Cancel
           </Button>
-          <Button variant="danger" onClick={handleDelete}>
+          <Button id="confirmdelete" variant="danger" onClick={handleDelete}>
             Delete
           </Button>
         </Modal.Footer>

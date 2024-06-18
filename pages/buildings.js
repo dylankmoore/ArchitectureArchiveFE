@@ -12,7 +12,6 @@ function Buildings() {
 
   useEffect(() => {
     getAllBuildings().then((data) => {
-      console.warn('Data received:', data);
       setBuildings(data);
       setIsLoading(false);
     }).catch((error) => {
@@ -22,17 +21,14 @@ function Buildings() {
   }, []);
 
   const handleViewMore = (buildingId) => {
-    console.warn(`View more details for building ID: ${buildingId}`);
     router.push(`/buildings/${buildingId}`);
   };
 
   const handleEdit = (buildingId) => {
-    console.warn(`Edit building ID: ${buildingId}`);
     router.push(`/buildings/edit/${buildingId}`);
   };
 
   const handleDelete = (buildingId) => {
-    console.warn(`Delete building ID: ${buildingId}`);
     deleteBuilding(buildingId).then(() => {
       setBuildings(buildings.filter((building) => building.buildingId !== buildingId));
     }).catch((error) => {

@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
-import { Card, Button, Modal } from 'react-bootstrap';
+import {
+  Card, Button, Modal, Tooltip, OverlayTrigger,
+} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 function BuildingDetailsCard({ building, onDelete, onEdit }) {
@@ -10,6 +12,12 @@ function BuildingDetailsCard({ building, onDelete, onEdit }) {
     onDelete(building.buildingId);
     setShowModal(false);
   };
+
+  const renderTooltip = (props) => (
+    <Tooltip id="button-tooltip" className="custom-tooltip" {...props}>
+      Indicates if the building is listed in the National Register of Historic Places.
+    </Tooltip>
+  );
 
   return (
     <div id="detailcontainer">
@@ -21,6 +29,9 @@ function BuildingDetailsCard({ building, onDelete, onEdit }) {
             <b>Location</b>: {building.location}<br /><br />
             <b>Year Built</b>: {building.yearBuilt}<br /><br />
             <b>Style</b>: {building.style}<br /><br />
+            <OverlayTrigger placement="right" overlay={renderTooltip}>
+              <b>Registered</b>
+            </OverlayTrigger>: {building.isRegisteredBool ? 'Yes' : 'No'}<br /><br />
             <b>Description</b>: {building.description}<br /><br />
             <b>Tags</b>: {building.tags.join(', ')}<br />
           </Card.Text>
@@ -43,10 +54,10 @@ function BuildingDetailsCard({ building, onDelete, onEdit }) {
           Are you sure you want to delete this building?
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
+          <Button id="cancel" variant="secondary" onClick={() => setShowModal(false)}>
             Cancel
           </Button>
-          <Button variant="danger" onClick={handleDelete}>
+          <Button id="confirmdelete" variant="danger" onClick={handleDelete}>
             Delete
           </Button>
         </Modal.Footer>
@@ -62,6 +73,7 @@ BuildingDetailsCard.propTypes = {
     location: PropTypes.string.isRequired,
     yearBuilt: PropTypes.string.isRequired,
     style: PropTypes.string.isRequired,
+    isRegisteredBool: PropTypes.bool.isRequired,
     description: PropTypes.string.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string).isRequired,
     imageURL: PropTypes.string.isRequired,
