@@ -1,44 +1,35 @@
-# React/Next.js Django Auth Template
+# Architecture Archive
 
-## Topics
-- [Get Started](#getting-started)
-- [Starting the Project](#starting-the-project)
-___
-## Getting Started
-### Use Template
-#### 1. To get started, click the GREEN "Use this Template" button at the top of the repo
-<img width="915" alt="Screen Shot 2022-07-06 at 12 54 01 PM" src="https://user-images.githubusercontent.com/29741570/177612998-4aac9237-5a1e-4f13-8ae0-468587521564.png">
+Architecture Archive is your gateway to exploring the depths of our architectural history. Our archive offers a deep dive into the intricate details, historical contexts, and cultural impacts of these architectural wonders. Whether you are an architect, historian, student, or simply a lover of beautiful buildings, our collection is designed to inspire and educate.
 
-#### 2. Make sure YOUR github account is selected in the dropdown and name your project
-<img width="763" alt="Screen Shot 2022-07-06 at 12 54 48 PM" src="https://user-images.githubusercontent.com/29741570/177613126-dd38f678-7553-4f27-8a4a-75680f14d71e.png">
+## About the User 
+- The ideal user for this application is anyone interested in history and architecture.
+- They are curious to learn more about historical structures.
+- The problem this app solves is having information about these structures in one place, making it easier to learn about & appreciate them.
+- The user will be able to access information to our archive while being able to add to it, fostering greater knowledge about historical structures.
 
-#### 3. Clone your new repo to your local machine
-#### 4. Go to the **NEXT** section
+## Features 
+- When a user logs in via google authorization, they will be greeted to a homepage welcoming the user & explaining the app
+- User can view the archive of historical buildings & structures
+- User can view the details of each building
+- User can update & delete the entries
 
-## Starting the Project
-1. Create a Firebase project and set up authentication. Use [these videos](https://vimeo.com/showcase/codetracker-firebase) as a refresher if needed.
-1. Create a `.env` file at the root of the project
-1. Copy/Paste the contents of the `.env.sample` file to your newly created `.env` file.
-1. Copy over all of your Firebase values into the `.env` file.
-1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name.
-1. From your command line, be in the root directory and run `npm install` OR `npm i` for short.
-1. Next, run `npm run prepare`. This command sets up husky to track eslint errors on commit that will make your deploy fail on Netlify.
-1. To start your application, run `npm run dev`. THIS IS THE COMMAND YOU WILL USE TO RUN YOUR DEVELOPMENT SERVER FROM NOW ON.
-1. Open [http://localhost:3000](http://localhost:3000) with your browser.
+## Video Walkthrough of Migraine Manager
+- coming soon!
 
-### If you see this, you are set to go!
-<img width="450" alt="Screen Shot 2022-07-06 at 1 07 27 PM" src="https://user-images.githubusercontent.com/29741570/177615077-9b6a75bc-0260-4d29-bb88-bd95a3140687.png">
+## Project Screenshots
+![aa-1](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/6c9317ef-85b4-4faa-97ff-cd89039d6bb5)
+![aa-2](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/a174f174-9e67-485d-bf38-90378f561ecb)
+![aa-3](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/79fa1a77-742e-4e96-becb-a60aea0d9aa3)
+![aa-4](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/949391ed-b960-4c19-9997-88cdfc248858)
+![aa-5](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/6a1aa6b9-5d6e-491e-b13f-e52306f9a249)
+![aa-6](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/810b3eeb-1bd9-4d9c-8b1e-944e460226aa)
 
+## Relevant Links 
+- [Backend Repo](https://github.com/dylankmoore/ArchitectureArchiveBE)
+- [Documentation](https://documenter.getpostman.com/view/32819688/2sA3QtdWJM)
+- [Wireframes](https://www.figma.com/design/957lYWWtl76ehs8c2vvPOO/Architecture-Archive?node-id=0-1&t=MFflAYoGfrfn982U-1)
+- [Project Board]([https://github.com/users/dylankmoore/projects/5](https://github.com/users/dylankmoore/projects/13))
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-**NOTES:** 
-- If you see the following error, you did not follow all the setup steps correctly and failed to add your Firebase creds. Go back and do that NOW.
-
-<img width="1043" alt="Screen Shot 2022-07-06 at 11 18 45 AM" src="https://user-images.githubusercontent.com/29741570/177612501-c2628f18-4bbd-4de9-aae6-27ffba1172d6.png">
-        
-## Learn More about Next.js
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributors
+- [Dylan Kristine Moore](https://github.com/dylankmoore)
