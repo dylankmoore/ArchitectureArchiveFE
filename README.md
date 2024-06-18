@@ -29,7 +29,7 @@ Architecture Archive is your gateway to exploring the depths of our architectura
 - [Backend Repo](https://github.com/dylankmoore/ArchitectureArchiveBE)
 - [Documentation](https://documenter.getpostman.com/view/32819688/2sA3QtdWJM)
 - [Wireframes](https://www.figma.com/design/957lYWWtl76ehs8c2vvPOO/Architecture-Archive?node-id=0-1&t=MFflAYoGfrfn982U-1)
-- [Project Board]([https://github.com/users/dylankmoore/projects/5](https://github.com/users/dylankmoore/projects/13))
+- [Project Board](https://github.com/users/dylankmoore/projects/13)
 
 ## Contributors
 - [Dylan Kristine Moore](https://github.com/dylankmoore)
