@@ -347,3 +347,8 @@ background-color:rgba(0, 0, 0, 0.2);
 background-color:rgba(0, 0, 0, 0.2);
 }
     
+#searchresults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

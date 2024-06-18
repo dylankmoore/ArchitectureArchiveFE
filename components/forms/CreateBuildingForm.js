@@ -85,8 +85,6 @@ function CreateBuildingForm() {
 
     const formDataWithUser = { ...formData, userId: user.id, tagIds: selectedTags };
 
-    console.warn('Submitting form data:', formDataWithUser);
-
     try {
       const newBuilding = await createBuilding(formDataWithUser);
 
