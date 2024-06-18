@@ -3,19 +3,19 @@
 Architecture Archive is your gateway to exploring the depths of our architectural history. Our archive offers a deep dive into the intricate details, historical contexts, and cultural impacts of these architectural wonders. Whether you are an architect, historian, student, or simply a lover of beautiful buildings, our collection is designed to inspire and educate.
 
 ## About the User 👤
-- The ideal user for this application is anyone interested in history and architecture.
-- They are curious to learn more about historical structures.
-- The problem this app solves is having information about these structures in one place, making it easier to learn about & appreciate them.
-- The user will be able to access information to our archive while being able to add to it, fostering greater knowledge about historical structures.
+- The ideal user for this application is anyone interested in history and architecture
+- They are curious to learn more about historical structures
+- The problem this app solves is having information about these structures in one place, making it easier to learn about & appreciate them
+- The user will be able to access information to our archive while being able to add to it, fostering greater knowledge about historical structures
 
 ## Features ✨
 - When a user logs in via google authorization, they will be greeted to a homepage welcoming the user & explaining the app
 - User can view the archive of historical buildings & structures
 - User can view the details of each building
 - User can update & delete the entries
-- User can add one style to each building, and multiple tags to each building.
+- User can add one style to each building, and multiple tags to each building
 
-## Video Walkthrough of Migraine Manager
+## Video Walkthrough of Architecture Archive
 - coming soon!
 
 ## Project Screenshots
