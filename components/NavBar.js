@@ -18,7 +18,7 @@ export default function NavBar() {
             <img src="/aalogo.png" alt="logo" className="nav-logo me-3" width="200" height="90" />
           </Navbar.Brand>
         </Link>
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -32,9 +32,6 @@ export default function NavBar() {
             <Link passHref href="/buildings/new">
               <Nav.Link>CREATE ENTRY</Nav.Link>
             </Link>&nbsp;
-            <Link passHref href="/profile">
-              <Nav.Link>PROFILE</Nav.Link>
-            </Link>
             <button
               type="button"
               onClick={signOut}

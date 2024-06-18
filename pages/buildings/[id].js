@@ -1,4 +1,3 @@
-// pages/buildings/[id].js
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Container } from 'react-bootstrap';
@@ -15,7 +14,9 @@ function BuildingDetails() {
   useEffect(() => {
     if (router.isReady && id) {
       getBuildingById(id)
-        .then(setBuilding)
+        .then((data) => {
+          setBuilding(data);
+        })
         .catch((err) => {
           console.error('Failed to fetch building details:', err);
           setError(err.message);
