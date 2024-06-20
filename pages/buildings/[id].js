@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Container } from 'react-bootstrap';
-import BuildingDetailsCard from '../../components/BuildingDetailCard';
+import BuildingDetailsSection from '../../components/BuildingDetailCard';
 import { getBuildingById } from '../../api/BuildingData';
 import Footer from '../footer';
 
@@ -47,7 +47,7 @@ function BuildingDetails() {
         <h4>BUILDING DETAILS</h4>
       </div>
       <hr /><br />
-      <BuildingDetailsCard
+      <BuildingDetailsSection
         building={building}
         onDelete={handleDelete}
         onEdit={handleEdit}

@@ -61,11 +61,12 @@ body {
 
 #landingpage {
   display: flex;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 #rightside {
   padding-left: 130px;
+  font-size: 15px;
 }
 
 #newentrybtn {
@@ -155,6 +156,16 @@ body {
   }
 
   #createpage {
+    display: flex;
+    justify-content: center;
+  }
+
+  #createcollection{
+  display: flex;
+  justify-content: center;
+  }
+
+  #updatecollection{
     display: flex;
     justify-content: center;
   }
@@ -351,4 +362,122 @@ background-color:rgba(0, 0, 0, 0.2);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+#edit2:hover{
+background-color:rgba(0, 0, 0, 0.2);
+}
+
+#delete2:hover{
+background-color:rgba(0, 0, 0, 0.2);
+}
+
+.collection-detail {
+  margin-top: 20px;
+}
+
+.collection-info {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.building-list .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 115px;
+}
+
+.building-list .col-md-6 {
+  flex: 1 0 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+}
+
+#columns{
+  padding-left: 20px;
+}
+
+#newcollectionbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px auto; /* Center the button and add margin below */
+  background-color: rgb(209, 82, 32);
+  border: 2px solid white;
+  font-size: 15px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#newcollectionbtn:hover {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 82, 32);
+    border-radius: 20px;
+    border: 2px solid white; 
+    color: white;
+    box-shadow: 0 10px 8px 0 rgb(148, 143, 143);
+  }
+
+  #collection-description {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .archive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  #archivetitle {
+    text-align: center;
+  }
+
+  #collbuttons {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  margin-right: 50px;
+  gap: 10px;
+}
+
+#viewcoll, #createcoll {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(209, 82, 32);
+  border: 2px solid white;
+  font-size: 15px;
+  color: white;
+  padding: 7px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#viewcoll {
+  width: 170px;
+}
+
+#createcoll {
+  width: 180px;
+}
+
+#viewcoll:hover, #createcoll:hover{
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 82, 32);
+    border-radius: 20px;
+    border: 2px solid white; 
+    color: white;
+    box-shadow: 0 10px 8px 0 rgb(148, 143, 143);
+}
+
+.form-control {
+  max-width: 1000px; /* Adjust the width as needed */
 }
