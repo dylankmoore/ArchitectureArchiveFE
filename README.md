@@ -25,9 +25,12 @@ Architecture Archive is your gateway to exploring the depths of our architectura
 
 ## Project Screenshots
 ![aa-1](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/6c9317ef-85b4-4faa-97ff-cd89039d6bb5)
-![aa-2](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/a174f174-9e67-485d-bf38-90378f561ecb)
-![aa-3](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/79fa1a77-742e-4e96-becb-a60aea0d9aa3)
-![aa-4](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/949391ed-b960-4c19-9997-88cdfc248858)
+![archive1](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/d5f602cd-cbd8-41b7-bb23-5570d9163806)
+![archive5](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/3ce9a72d-a80a-4ec9-a07d-f56f0e7bf75f)
+![archive2](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/5add087b-f3f7-47cf-ba81-2972ec8e5e8d)
+![archive3](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/aa6febce-3474-4a17-8f7b-ba6da1e33883)
+![archive4](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/2307613d-3930-4765-a5ba-28d722cb0f9c)
+![archive6](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/3834e2ab-8c4c-4bb0-ad7e-3d96c0fdd0a8)
 ![aa-5](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/6a1aa6b9-5d6e-491e-b13f-e52306f9a249)
 ![aa-6](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/810b3eeb-1bd9-4d9c-8b1e-944e460226aa)
 
@@ -36,6 +39,7 @@ Architecture Archive is your gateway to exploring the depths of our architectura
 - [Documentation](https://documenter.getpostman.com/view/32819688/2sA3QtdWJM)
 - [Wireframes](https://www.figma.com/design/957lYWWtl76ehs8c2vvPOO/Architecture-Archive?node-id=0-1&t=MFflAYoGfrfn982U-1)
 - [Project Board](https://github.com/users/dylankmoore/projects/13)
+- [ERD](https://dbdiagram.io/d/ARCHIVE-663992099e85a46d5527466f)
 
 ## Contributors
 - [Dylan Kristine Moore](https://github.com/dylankmoore)
