@@ -47,7 +47,7 @@ export default function NavBar() {
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <Nav className="me-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Link passHref href="/">
               <Nav.Link>HOME</Nav.Link>
             </Link>&nbsp;
@@ -56,6 +56,9 @@ export default function NavBar() {
             </Link>&nbsp;
             <Link passHref href="/buildings/new">
               <Nav.Link>CREATE ENTRY</Nav.Link>
+            </Link>&nbsp;
+            <Link passHref href="/collections">
+              <Nav.Link>COLLECTIONS</Nav.Link>
             </Link>&nbsp;
           </Nav>
           <SearchBar

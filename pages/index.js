@@ -64,7 +64,7 @@ function Home() {
 
             Our archive offers a deep dive into the intricate details, historical contexts, and cultural impacts of these architectural wonders. Whether you are an architect, historian, student, or simply a lover of beautiful buildings, our collection is designed to inspire and educate.<br /><br />
 
-            Join our community of architecture enthusiasts and history lovers. Together, we can preserve and honor the legacy of these iconic structures for future generations to admire and learn from.<br /><br />
+            Join our community of architecture enthusiasts and history lovers. Together, we can preserve and honor the legacy of these iconic structures for future generations to admire and learn from. Users can manage the archive and collections by clicking on the buttons below.<br /><br />
 
             Let’s get started...
           </p><br />
@@ -74,9 +74,17 @@ function Home() {
           </Link>&nbsp; &nbsp;
           <Link href="/buildings/new" passHref>
             <Button type="button" className="copy-btn raise" id="newentrybtn">Create Entry</Button>
-          </Link>
+          </Link><br />
+          <div id="collbuttons">
+            <Link href="/collections" passHref>
+              <Button type="button" className="copy-btn raise" id="viewcoll">View Collections</Button>
+            </Link>
+            <Link href="/collections/new" passHref>
+              <Button type="button" className="copy-btn raise" id="createcoll">Create Collection</Button>
+            </Link>
+          </div>
         </div>
-      </div>
+      </div><br />
       <footer style={{
         width: '100%', textAlign: 'center', marginTop: '20px', padding: '20px 0', fontSize: '0.8rem', borderTop: '1px solid #ccc',
       }}
