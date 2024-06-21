@@ -21,7 +21,7 @@ Architecture Archive is your gateway to exploring the depths of our architectura
 - Each building can be in many collections, and each collection can have many buildings
 
 ## Video Walkthrough of Architecture Archive
-- coming soon!
+- [Loom video](https://www.loom.com/share/ac4a28c86edb4c40b31b69b577e0426b?sid=a37492b8-d72d-4081-a60c-2ad7c307634a)
 
 ## Project Screenshots
 ![aa-1](https://github.com/dylankmoore/ArchitectureArchiveFE/assets/134669892/6c9317ef-85b4-4faa-97ff-cd89039d6bb5)
